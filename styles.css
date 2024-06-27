@@ -1,0 +1,81 @@
+:root {
+    --deeporange: rgb(230, 74, 25);
+    --red: rgb(211, 44, 60);
+    --yellow: rgb(235,215,118);
+    --green: rgb(70, 136, 123);
+    --blue: rgb(58, 193, 188);
+    --grey: rgb(223, 219, 218);
+}
+
+body  {
+    /* background-color: rgb(52, 52, 52); */
+    background-color: rgb(249, 249, 249);
+}
+
+.dot, .dot1, .dot2, .dot3, .dot4 {
+    height: 50vw; /* Set height equal to 50% of viewport width */
+    width: 50vw; /* Set width equal to 50% of viewport width */
+    border-radius: 50%; /* Make sure border radius is 50% to create a circle */
+
+    position: absolute; /* Position absolutely */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning to center the circle */
+    background-image: conic-gradient(
+        from var(--angleX),
+        black,
+        var(--red),
+        var(--yellow),
+        var(--grey),
+        var(--green),
+        var(--blue),
+        black,
+        var(--red),
+        var(--yellow),
+        var(--grey),
+        var(--green),
+        var(--blue),
+        black
+    );
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px; */
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 0.25vb;
+}
+
+/* 
+@keyframes rotateGradient {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+.dot1 {
+    height: 40vw;
+    width: 40vw;
+    --angleX: var(--angleX1);
+    position: absolute;
+}
+
+.dot2 {
+    height: 30vw;
+    width: 30vw;
+    --angleX: var(--angleX2);
+    position: absolute;
+}
+
+.dot3 {
+    height: 20vw;
+    width: 20vw;
+    --angleX: var(--angleX3);
+    position: absolute;
+}
+
+.dot4 {
+    height: 10vw;
+    width: 10vw;
+    --angleX: var(--angleX4);
+    position: absolute;
+}
